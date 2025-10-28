@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ōdū - Sustainable Agricultural Practices</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    
+    <!-- Leaflet CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+    <style>
+        
+    </style>
+</head>
+<body class="bg-white">
+     <!-- Header  -->
+    <div id="header"></div>
+
+     <!-- Hero Section  -->
+    <section class="hero-section h-[500px] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-white mb-4 leading-tight">
+                    Revitalizing Local Economies Through Sustainable Agricultural Practices
+                </h1>
+                <p class="text-lg text-white mb-8 leading-relaxed">
+                    Empowering growers, preserving culture, and building sustainable communities for generations to come
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://symbodied.com/public/user/user_signup.html" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium">
+                        Get Started
+                    </a>
+                    <button class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-medium">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Mission Section  -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    The Odu project is a transformative initiative focused on revitalizing local economies by empowering growers as the foundation of product
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                 <!-- Card 1  -->
+                <div class="bg-red-50 p-8 rounded-lg">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainable farming</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Promoting ethical agricultural practices that nurture the earth. Promoting ethical agricultural
+                    </p>
+                </div>
+                
+                 <!-- Card 2  -->
+                <div class="bg-red-50 p-8 rounded-lg">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community building</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Creating strong, self reliant farming communities. Creating strong, self reliant farming
+                    </p>
+                </div>
+                
+                 <!-- Card 3  -->
+                <div class="bg-red-50 p-8 rounded-lg">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sustainable farming</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Promoting ethical agricultural practices that nurture the earth. Promoting ethical agricultural
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Program Section  -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Program</h2>
+                <p class="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    More than a farming initiative, The Odù Project is a sanctuary for learning, a space for connection, and a blueprint for self-sufficiency. Through hands-on training, cultural revival, and grassroots leadership, we aim to create a world where communities flourish—economically, culturally, and spiritually.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                 <!-- Program Card 1  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="assets/images/unsplash_bofe6iZUW_A.jpg" alt="Agricultural training" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Agricultural training</h3>
+                        <p class="text-gray-600">
+                            Learn vital skills in sustainable farming, crop management, and soil health.
+                        </p>
+                    </div>
+                </div>
+                
+                 <!-- Program Card 2  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="assets/images/unsplash_bofe6iZUW_A-1.jpg" alt="Cultural heritage" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cultural heritage</h3>
+                        <p class="text-gray-600">
+                            Connect with ancestral wisdom and traditional agricultural practices.
+                        </p>
+                    </div>
+                </div>
+                
+                 <!-- Program Card 3  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                    <img src="assets/images/unsplash.jpg" alt="Community governance" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Community governance</h3>
+                        <p class="text-gray-600">
+                            Participate in assemblies and learn about cooperative decision-making.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact Section -->
+    <section class="bg-zinc-900 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-white text-3xl md:text-4xl font-bold text-center mb-12">Our Impact</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="text-rose-500 text-4xl md:text-5xl font-bold mb-2">1,000+</div>
+                    <div class="text-white text-sm md:text-base">Farms Trained</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="text-rose-500 text-4xl md:text-5xl font-bold mb-2">4,000</div>
+                    <div class="text-white text-sm md:text-base">Acres Cultivated</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="text-rose-500 text-4xl md:text-5xl font-bold mb-2">30+</div>
+                    <div class="text-white text-sm md:text-base">Active Unions</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="text-rose-500 text-4xl md:text-5xl font-bold mb-2">50+</div>
+                    <div class="text-white text-sm md:text-base">Communities Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Our Community Says Section -->
+    <section class="bg-gray-50 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-zinc-900 text-3xl md:text-4xl font-bold text-center mb-12">What Our Community Says</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial Card 1 -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-3 flex-shrink-0 overflow-hidden">
+                            <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-zinc-900 text-sm">Amaka Enwo</h3>
+                            <p class="text-gray-600 text-xs">Community Farmer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        “The Odu Project has transformed not just my farming practices, but my entire perspective on sustainable agriculture. The training and community support have been invaluable.”
+                    </p>
+                    <div class="flex gap-0.5">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-3 flex-shrink-0 overflow-hidden">
+                            <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-zinc-900 text-sm">Amaka Enwo</h3>
+                            <p class="text-gray-600 text-xs">Community Farmer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        This has been a transformational journey with the community. From my first encounter with ODU, I've not only learned advanced farming methods but have also seen my yield multiply by three.
+                    </p>
+                    <div class="flex gap-0.5">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-3 flex-shrink-0 overflow-hidden">
+                            <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-zinc-900 text-sm">Amaka Enwo</h3>
+                            <p class="text-gray-600 text-xs">Community Farmer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                        This has been a transformational journey with the community. From my first encounter with ODU, I've not only learned advanced farming methods but have also seen my yield multiply by three.
+                    </p>
+                    <div class="flex gap-0.5">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Culture Our Heritage Section  -->
+    <section class="bg-rose-50 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+             <!-- Header  -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Culture Our Heritage</h2>
+                <p class="text-gray-600 text-lg">Preserving ancestral wisdom and traditional practices for future generations</p>
+            </div>
+
+             <!-- Main Content Grid  -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                 <!-- Left: Image  -->
+                <div class="flex items-center justify-center">
+                    <img src="assets/images/Our culture.jpg" alt="Community farming" class="rounded-lg shadow-lg w-full max-w-md object-cover">
+                </div>
+
+                 <!-- Right: Checklist Items  -->
+                <div class="flex flex-col justify-center space-y-6">
+                     <!-- Item 1  -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-6 h-6 rounded flex items-center justify-center">
+                                <img src="assets/svgs/Vector (1).svg" alt="Ancestral knowledge" class="object-contain w-6 h-6">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Ancestral knowledge</h3>
+                            <p class="text-gray-600 text-sm">Documenting and nurturing traditional farming techniques and cultural practices passed down through generations.</p>
+                        </div>
+                    </div>
+
+                     <!-- Item 2  -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-6 h-6 rounded flex items-center justify-center">
+                                <img src="assets/svgs/Vector (2).svg" alt="Ancestral knowledge" class="object-contain w-6 h-6">
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Ancestral knowledge</h3>
+                            <p class="text-gray-600 text-sm">Documenting and nurturing traditional farming techniques and cultural practices passed down through generations.</p>
+                        </div>
+                    </div>
+
+                     <!-- Item 3  -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-6 h-6 rounded flex items-center justify-center">
+                                <img src="assets/svgs/Vector (3).svg" alt="Ancestral knowledge" class="object-contain w-6 h-6">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Ancestral knowledge</h3>
+                            <p class="text-gray-600 text-sm">Documenting and nurturing traditional farming techniques and cultural practices passed down through generations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Bottom Cards Grid  -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                 <!-- Card 1  -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 12 7.4l3.38 4.6L17 10.83 14.92 8H20v6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Cultural event</h3>
+                    <p class="text-gray-600 text-sm">Celebrating our rich cultural heritage through music, dance, and storytelling.</p>
+                </div>
+
+                 <!-- Card 2  -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Cultural event</h3>
+                    <p class="text-gray-600 text-sm">Celebrating our rich cultural heritage through music, dance, and storytelling.</p>
+                </div>
+
+                 <!-- Card 3  -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Cultural event</h3>
+                    <p class="text-gray-600 text-sm">Celebrating our rich cultural heritage through music, dance, and storytelling.</p>
+                </div>
+
+                 <!-- Card 4  -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Cultural event</h3>
+                    <p class="text-gray-600 text-sm">Celebrating our rich cultural heritage through music, dance, and storytelling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Latest Insights Section  -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+             <!-- Header  -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Latest Insights</h2>
+                <p class="text-gray-600 text-lg">Stories from our vibrant farming community</p>
+            </div>
+
+             <!-- Blog Cards Grid  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                 <!-- Blog Card 1  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="relative">
+                        <img src="assets/images/unsplash_bofe6iZUW_A.jpg" alt="Sustainable farming" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 left-4 bg-white text-red-600 text-xs font-bold px-3 py-1 rounded">FARMING</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Sustainable Farming Techniques For Modern Agriculture</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn about innovative farming methods that combine traditional wisdom with modern technology.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">John Smith</p>
+                                    <p class="text-xs text-gray-500">Jan 20, 2025</p>
+                                </div>
+                            </div>
+                            <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700 flex items-center gap-1">
+                                Read full article
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Blog Card 2  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="relative">
+                        <img src="assets/images/unsplash_bofe6iZUW_A.jpg" alt="Sustainable farming" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 left-4 bg-white text-red-600 text-xs font-bold px-3 py-1 rounded">FARMING</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Sustainable Farming Techniques For Modern Agriculture</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn about innovative farming methods that combine traditional wisdom with modern technology.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">John Smith</p>
+                                    <p class="text-xs text-gray-500">Jan 20, 2025</p>
+                                </div>
+                            </div>
+                            <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700 flex items-center gap-1">
+                                Read full article
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Blog Card 3  -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="relative">
+                        <img src="assets/images/unsplash_bofe6iZUW_A.jpg" alt="Sustainable farming" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 left-4 bg-white text-red-600 text-xs font-bold px-3 py-1 rounded">FARMING</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Sustainable Farming Techniques For Modern Agriculture</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn about innovative farming methods that combine traditional wisdom with modern technology.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">John Smith</p>
+                                    <p class="text-xs text-gray-500">Jan 20, 2025</p>
+                                </div>
+                            </div>
+                            <a href="#" class="text-red-600 text-sm font-medium hover:text-red-700 flex items-center gap-1">
+                                Read full article
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- View All Posts Button  -->
+            <div class="text-center">
+                <button class="px-8 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-colors">
+                    View All Posts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Our Map Section -->
+    <section class="bg-gray-50 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Explore our Map</h2>
+                <p class="text-gray-600 text-sm md:text-base">Discover farms, testing hubs, and commercial growth with the Odu Project across regions</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex gap-3 mb-6">
+                <button class="px-5 py-2 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 transition">
+                    Farms
+                </button>
+                <button class="px-5 py-2 bg-gray-400 text-white text-sm font-medium rounded hover:bg-gray-500 transition">
+                    Testing Hub
+                </button>
+                <button class="px-5 py-2 bg-gray-400 text-white text-sm font-medium rounded hover:bg-gray-500 transition">
+                    Research Hub
+                </button>
+            </div>
+            
+            <!-- Map Image -->
+            <!-- <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="/images/map-odu.png" alt="Odu Project Map" class="w-full h-auto">
+            </div> -->
+            <!-- Live Map -->
+            <div id="odu-map" class="bg-white rounded-lg shadow-sm overflow-hidden h-96 w-full"></div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-2xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+                <p class="text-gray-600 text-sm">Stories and updates from our community</p>
+            </div>
+            
+            <!-- FAQ Items -->
+            <div class="space-y-0">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">What does "Odu" mean, and why is it the name of this project?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">The word Odù is sacred in Afa, Ifá, and Fa—West African spiritual systems that carry the wisdom, destiny, and stories of our people. We chose this name to ground our work in ancestral intelligence. Just as an Odu contains multitudes of meaning, our project seeks to address the multitude of ways we can reclaim our land, culture, and self-determination. This is not just farming; it is a spiritual and political practice rooted in deep tradition.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">What is the political vision of The Odu Project?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">Our vision is a future where Black and oppressed communities are liberated and self-determined, with food systems, culture, and governance rooted in ancestral wisdom and ecological justice. We believe, as Thomas Sankara did, that we must "dare to invent the future," and that future is one where, in the words of Emiliano Zapata, "the land belongs to those who work it."</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal"> What do you actually do?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm"> 
+                            We operate on three interconnected fronts: <br />
+                            · Urban Farming & Food Sovereignty: We grow ancestral crops (okra, hibiscus, amaranth, etc.) using regenerative practices on urban plots across North Carolina. This is direct action for food autonomy.<br />
+                            · Community Organizing: Our Garden Clubs are bases for political education and building people's assemblies. We don't just grow food; we grow collective power.<br />
+                            · Political Education: We host workshops and youth programs that connect agroecology to African diasporic traditions and anti-colonial thinkers like Frantz Fanon, bell hooks, and Paulo Freire.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal"> Where are you located?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">We are currently on the ground in Durham, Orange County, and Winston-Salem, North Carolina. We are actively building solidarity and planning for expansion into Southeast North Carolina, the Atlanta area, and the Gullah Geechee corridor.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">What does "Food Sovereignty" mean to you?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm"> For us, food sovereignty is the political right of a community to control its own food systems. It is a direct rejection of the colonial, capitalist food model that disconnects us from the land and makes nourishment a market privilege. It is about reclaiming the power to define what we eat, how we grow it, and who benefits from it.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal"> How can I join a Garden Club?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">If you are in or near one of our current locations, you can join by clicking the "Join a Garden Club" button on our website and filling out the form. We welcome all who are ready to work the land and build community with us. No prior farming experience is necessary, only a commitment to collective work and liberation.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">I don't have a green thumb. How can I help?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">There are many ways to contribute your energy! You can:<br />
+                        · Volunteer for seasonal harvests, community outreach, or skill-sharing (e.g., carpentry, graphic design, childcare during events).<br />
+                        · Donate to fund seeds, soil, tools, and our educational programs.<br />
+                        · Invite Us to teach or collaborate with your organization, school, or community group.<br />
+                        · Spread the Word by following and sharing our work on Instagram (@oduproject).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">Can you come speak or run a workshop for our organization?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">Yes. We offer workshops, assemblies, and community teachings rooted in food sovereignty and political ecology. Please contact us at info@theoduproject.com with "Speaking Request" in the subject line to discuss possibilities.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">How is farming a form of liberation?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">For centuries, our ancestors were forced to work the land for the enrichment of others. To now work the land for our own nourishment, our own economies, and our own cultural survival is a revolutionary act. As Fannie Lou Hamer demonstrated, food autonomy is a foundation of political independence. We are literally growing our freedom.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">What do you mean by "Global Solidarity"?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm"> Our struggle for land and food sovereignty is not isolated. We stand in solidarity with African agroecological networks, Maroon and Caribbean land traditions, Indigenous land stewards, and all Global South movements resisting the same extractive colonial systems. We learn from and connect our local work to these global freedom movements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">Who are your guiding thinkers?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">Our work is deeply informed by a tapestry of revolutionary voices, including:<br />
+                        · Amílcar Cabral on culture and liberation.<br />
+                        · Thomas Sankara on self-sufficiency and daring to invent the future.<br />
+                        · Paulo Freire & bell hooks on critical pedagogy and education as the practice of freedom.<br />
+                        · Frantz Fanon on decolonization.<br />
+                        · The Zapatistas on autonomy and the principle that "land is life."<br />
+                        · The long legacy of Southern Black cooperative economics and organizing.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">How are you funded?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm"> We are sustained by the people. Our primary support comes from individual donations, community grants, and the collective labor of our members. We are committed to remaining accountable to our community, not to corporate or philanthropic interests that would dilute our political vision.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-t border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal"> How can my organization partner with The Odu Project?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm"> We are open to collaborations with aligned organizations who share our commitment to land liberation, food sovereignty, and building collective power. Please reach out to us at contact@theoduproject.com to explore potential partnerships.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 (Last item with bottom border) -->
+                <div class="faq-item border-t border-b border-gray-200">
+                    <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span class="text-gray-800 text-sm md:text-base font-normal">I have more questions. What's the best way to contact you?</span>
+                        <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-2 pb-5">
+                        <p class="text-gray-600 text-sm">For all inquiries, the best email is contact@theoduproject.com. You can also follow our daily work and message us on Instagram @oduproject.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Movement Section -->
+    <section class="bg-red-600 py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-white text-3xl md:text-4xl font-bold mb-3">Join the Movement</h2>
+            <p class="text-white text-sm md:text-base mb-6 max-w-2xl mx-auto">
+                Be a part of a transformative initiative that's reshaping food communities and pioneering our cultural heritage
+            </p>
+            <button class="bg-white text-red-600 px-6 py-2.5 rounded font-medium text-sm hover:bg-gray-100 transition">
+                Subscribe
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

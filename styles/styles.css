@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/images/Pixabay-9322331.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Custom styles for the accordion */
+.faq-item {
+    transition: all 0.3s ease;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+.faq-item.active .chevron {
+    transform: rotate(180deg);
+}
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+
+.red-accent {
+    background-color: #DC2626;
+}
+
+.red-accent:hover {
+    background-color: #B91C1C;
+}
+
+.pink-bg {
+    background-color: #FCE7F3;
+}
+
+.card-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

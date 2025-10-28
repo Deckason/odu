@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ōdū - Sustainable Agricultural Practices</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom styles for the accordion */
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-item.active .chevron {
+            transform: rotate(180deg);
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white">
+     <!-- Header  -->
+    <div id="header"></div>
+
+     <!-- Hero Section  -->
+    <section class="hero-section h-[500px] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold text-white mb-4 leading-tight">
+                    Revitalizing Local Economies Through Sustainable Agricultural Practices
+                </h1>
+                <p class="text-lg text-white mb-8 leading-relaxed">
+                    Empowering growers, preserving culture, and building sustainable communities for generations to come.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://symbodied.com/public/user/user_signup.html" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium">
+                        Get Started
+                    </a>
+                    <button class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-medium">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Odu Project Section -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Left Content -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">About The Odu Project</h2>
+          
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            The Odu Project is an independent, community-led movement that empowers smallholder farmers to grow high-quality 
+            food in a way that is equitable and sustainable. The Odu Project collaborates with farmers across West Africa who 
+            embrace the quest "Farmers, Engaged, and Cultivators" whose work sustains the essential rhythms of food security 
+            in the region. We believe healthy food leads to prosperous communities.
+          </p>
+          
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            The Odu Project places farmers at the center of food systems, promoting equitable and environmental 
+            governance. Through assemblies, cooperatives, and unions, The Odu Project builds structures that empower 
+            and compensate farmers. In particular, The Odu Project strengthens local ownership. It is built upon respect and 
+            autonomy, dignity, and democracy. The Odu Project collaborates with farmers, scientists, and innovators who 
+            share a commitment to high-quality and sustainability.
+          </p>
+          
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            More than a labeling initiative, The Odu Project is a pathway for learning, a space for connection, and a 
+            blueprint for what's to come. Through partnerships with farmers, cultural groups, and innovators, The Odu Project 
+            cultivates autonomy and resilience. The Odu Project focuses on creating value that enables every farmer to live 
+            sustainably and vigorously.
+          </p>
+          
+          <p class="text-gray-700 leading-relaxed">
+            As a cornerstone of food/health values, we recognize that growers are the backbone of economic sustainability 
+            and progress. The Odu Project is a transformative initiative focused on redefining local economies through 
+            empowering growers and producers.
+          </p>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="lg:pl-8">
+          <img 
+            src="/images/odu-project.png" 
+            alt="Farmer harvesting crops" 
+            class="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Development Journey Section -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-4">Our Development Journey</h2>
+      <p class="text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+        From humble beginnings to a transformative movement, our journey has evolved through careful planning, 
+        community engagement, and sustainable practices. This is how our journey unfolds.
+      </p>
+      
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-red-500 h-full" style="top: 20px; bottom: 20px;"></div>
+        
+        <!-- Timeline Items -->
+        <div class="space-y-16">
+          <!-- Baseline -->
+          <div class="relative flex items-start">
+            <!-- Left Side (odd items) -->
+            <div class="w-1/2 pr-12 text-right">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Baseline</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Begins with small-scale voluntary gatherings focused on building trust and 
+                foundational social value. Focus on partnerships (pre-testing, farmer capacity).
+              </p>
+            </div>
+            
+            <!-- Center Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow"></div>
+            
+            <!-- Right Side -->
+            <div class="w-1/2 pl-12">
+            </div>
+          </div>
+          
+          <!-- World Growth -->
+          <div class="relative flex items-start">
+            <!-- Left Side -->
+            <div class="w-1/2 pr-12">
+            </div>
+            
+            <!-- Center Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow"></div>
+            
+            <!-- Right Side (even items) -->
+            <div class="w-1/2 pl-12">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">World Growth</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Scale grower and community gatherings, an approach to building trust and 
+                understanding food access. Focus on partnerships (pre-testing, farmer capacity).
+              </p>
+            </div>
+          </div>
+          
+          <!-- Scaling -->
+          <div class="relative flex items-start">
+            <!-- Left Side (odd items) -->
+            <div class="w-1/2 pr-12 text-right">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Scaling</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Begins with small-scale voluntary gatherings focused on building trust and 
+                foundational social value. Focus on partnerships (pre-testing, farmer capacity).
+              </p>
+            </div>
+            
+            <!-- Center Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow"></div>
+            
+            <!-- Right Side -->
+            <div class="w-1/2 pl-12">
+            </div>
+          </div>
+          
+          <!-- Independence -->
+          <div class="relative flex items-start">
+            <!-- Left Side -->
+            <div class="w-1/2 pr-12">
+            </div>
+            
+            <!-- Center Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-red-500 rounded-full border-4 border-white shadow"></div>
+            
+            <!-- Right Side (even items) -->
+            <div class="w-1/2 pl-12">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Independence</h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Scale grower and community gatherings, an approach to building trust and 
+                understanding food access. Focus on partnerships (pre-testing, farmer capacity).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Impact Stories Section -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-black">More Impact Stories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden card-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu12-Dq2MvFcYLtllLzez1XV71EMlliXVzm.png" alt="Youth Empowerment" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2 text-black">Youth Empowerment Initiatives</h3>
+                        <p class="text-gray-600 text-sm mb-4">Because of the Odu project, we were able to inspire 100+ young people return to agricultural roots while implementing innovative sustainable practices.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <p class="font-semibold text-sm text-black">Josiah Evans</p>
+                                <p class="text-xs text-gray-500">Community Farmer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden card-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu12-Dq2MvFcYLtllLzez1XV71EMlliXVzm.png" alt="Women's Cooperative" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2 text-black">Women's Cooperative Success</h3>
+                        <p class="text-gray-600 text-sm mb-4">With the help of the Odu Project, women came together to form a successful cooperative, reviving traditional farming methods and creating economic independence.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <p class="font-semibold text-sm text-black">Josiah Evans</p>
+                                <p class="text-xs text-gray-500">Community Farmer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden card-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu12-Dq2MvFcYLtllLzez1XV71EMlliXVzm.png" alt="Women's Cooperative" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2 text-black">Women's Cooperative Success</h3>
+                        <p class="text-gray-600 text-sm mb-4">With the help of the Odu Project, women came together to form a successful cooperative, reviving traditional farming methods and creating economic independence.</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div>
+                                <p class="font-semibold text-sm text-black">Josiah Evans</p>
+                                <p class="text-xs text-gray-500">Community Farmer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
