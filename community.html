@@ -17,11 +17,11 @@
     <div id="header"></div>
 
     <!-- Hero Section -->
-    <div class="flex flex-col lg:flex-row min-h-screen border border-4 border-red-400">
+    <div class="flex flex-col lg:flex-row lg:min-h-screen">
         <!-- Left Column -->
-        <div class="w-full lg:w-1/2 bg-pink-100 flex items-center justify-center p-8 lg:p-16 border border-4 border-blue-400 h-full">
+        <div class="w-full lg:min-h-screen lg:w-1/2 bg-pink-100 flex items-center justify-center p-8 lg:p-16">
             <div class="max-w-md">
-                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 lg:mb-4 leading-tight">
                     Cultivating Change Through Community
                 </h1>
                 <p class="text-gray-700 text-base mb-8 leading-relaxed">
@@ -39,11 +39,12 @@
         </div>
 
         <!-- Right Column - Image -->
-        <div class="w-full lg:w-1/2 bg-gray-100 flex items-center justify-center p-8 hidden md:flex lg:p-16">
+        <div class="w-full lg:w-1/2 bg-gray-100 flex items-center justify-center hidden lg:flex">
             <img 
                 src="assets/images/Community.jpg" 
                 alt="Farmer in field" 
                 class="w-full h-full object-cover rounded-2xl shadow-lg"
+                loading="lazy"
             >
         </div>
     </div>
@@ -61,9 +62,10 @@
                 <div class="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm hover:shadow-md transition duration-200">
                     <div class="flex justify-center mb-4">
                         <img 
-                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu7-uz2qixTn72BWHv7jMtfWaQ0B0gqWDX.png" 
+                            src="assets/images/Image-2.jpg" 
                             alt="Profile" 
                             class="w-16 h-16 rounded-full object-cover"
+                            loading="lazy"
                         >
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">
@@ -86,9 +88,10 @@
                 <div class="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm hover:shadow-md transition duration-200">
                     <div class="flex justify-center mb-4">
                         <img 
-                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu7-uz2qixTn72BWHv7jMtfWaQ0B0gqWDX.png" 
+                            src="assets/images/Image-2.jpg" 
                             alt="Profile" 
                             class="w-16 h-16 rounded-full object-cover"
+                            loading="lazy"
                         >
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">
@@ -111,9 +114,10 @@
                 <div class="bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm hover:shadow-md transition duration-200">
                     <div class="flex justify-center mb-4">
                         <img 
-                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu7-uz2qixTn72BWHv7jMtfWaQ0B0gqWDX.png" 
+                            src="assets/images/Image-2.jpg" 
                             alt="Profile" 
                             class="w-16 h-16 rounded-full object-cover"
+                            loading="lazy"
                         >
                     </div>
                     <h3 class="text-lg font-semibold text-gray-900 mb-2">
@@ -136,28 +140,45 @@
     </div>
 
     <!-- Community Portal Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-16">
-                <!-- Left Image -->
-                <div class="flex justify-center">
-                    <div class="w-48 h-48 bg-gray-300 rounded-full overflow-hidden flex-shrink-0"></div>
-                </div>
-                
-                <!-- Center Content -->
-                <div class="text-center">
-                    <h2 class="text-3xl font-bold mb-4 text-black">Community Portal</h2>
-                    <p class="text-gray-600 mb-6">This is more than just a portal, it's your digital village square. Join us, share your voice and shape the future. Here we bridge tradition and innovation because changing the world starts with community.</p>
-                    <button class="red-accent text-white px-8 py-2 rounded font-semibold hover:bg-red-700 transition">Join Now</button>
-                </div>
-                
-                <!-- Right Image -->
-                <div class="flex justify-center">
-                    <div class="w-48 h-48 bg-green-400 rounded-full overflow-hidden flex-shrink-0"></div>
-                </div>
+    <section class="px-4 bg-white">
+        <div class="max-w-[80%] py-4 mx-auto h-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center min-h-[500px]">
+            
+            <!-- Left Image (Bottom-Aligned) -->
+            <div class="flex items-end justify-center h-full">
+                <!-- <div class="w-48 h-48 bg-gray-300 rounded-full overflow-hidden flex-shrink-0"></div> -->
+                 <img 
+                    src="assets/images/unsplash_J-hbGCsK204.jpg" 
+                    alt="Profile" 
+                    class="w-64 h-64 rounded-full object-cover"
+                    loading="lazy"
+                >
+            </div>
+            
+            <!-- Center Content -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-4 text-black">Community Portal</h2>
+                <p class="text-gray-600 mb-6">
+                This is more than just a portal, it's your digital village square. Join us, share your voice and shape the future. Here we bridge tradition and innovation because changing the world starts with community.
+                </p>
+                <button class="red-accent text-white px-8 py-2 rounded font-semibold hover:bg-red-700 transition">Join Now</button>
+            </div>
+            
+            <!-- Right Image (Top-Aligned) -->
+            <div class="flex items-start justify-center h-full">
+                <!-- <div class="w-48 h-48 bg-green-400 rounded-full overflow-hidden flex-shrink-0"></div> -->
+                 <img 
+                    src="assets/images/Pixabay-386673.jpg" 
+                    alt="Profile" 
+                    class="w-64 h-64 rounded-full object-cover"
+                    loading="lazy"
+                >
+            </div>
+            
             </div>
         </div>
-    </section>
+        </section>
+
 
     <!-- Volunteer and Support Section -->
     <section class="py-16 px-4 pink-bg">
@@ -300,16 +321,44 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-black">Photos Of Our Community Members In Action</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80"></div>
-                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80"></div>
-                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80"></div>
-                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80"></div>
+                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80">
+                    <img 
+                    src="assets/images/Pixabay-5949725.jpg" 
+                    alt="Profile" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                >
+                </div>
+                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80">
+                    <img 
+                    src="assets/images/Pixabay-5949725-1.jpg" 
+                    alt="Profile" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                >
+                </div>
+                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80">
+                    <img 
+                    src="assets/images/Pixabay-5949725-2.jpg" 
+                    alt="Profile" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                >
+                </div>
+                <div class="bg-gray-300 rounded-lg overflow-hidden h-64 md:h-80">
+                    <img 
+                    src="assets/images/Pixabay-5949725-3.jpg" 
+                    alt="Profile" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                >
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Join The Odu Community Section -->
-    <section class="py-20 px-4 relative" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odu11-9gaz8UHO4w7mGIykxgkXTwQmMB2uuT.png'); background-size: cover; background-position: center;">
+    <section class="py-20 px-4 relative" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/images/Image.jpg'); background-size: cover; background-position: center;">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-5xl font-bold mb-3 text-black">Join The Odu Community</h2>
             <p class="text-lg text-gray-800 mb-8">Grow, team, and build with us</p>
