@@ -10,6 +10,18 @@ body {
     background-position: center;
 }
 
+.about-hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/images/HeroSection.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.volunteer-hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/images/Image-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* Custom styles for the accordion */
 .faq-item {
     transition: all 0.3s ease;
