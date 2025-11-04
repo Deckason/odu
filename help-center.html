@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ōdū - Sustainable Agricultural Practices</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+</head>
+<body class="bg-white">
+     <!-- Header  -->
+    <div id="header"></div>
+
+    <main class="mx-4 md:mx-auto my-16">
+        <!-- Header Banner -->
+        <section class="bg-red-600 text-white py-8 px-4 sm:px-6 lg:px-8 max-w-[80%] mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-4 flex justify-center">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold mb-2">Help center</h1>
+                <p class="text-sm">
+                    Welcome to our Help Center, we are here to support you with quick answers, guides, and solutions wherever
+                    you need them
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-white py-16 px-4">
+            <div class="max-w-2xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+                    <p class="text-gray-600 text-sm">Stories and updates from our community</p>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="space-y-0">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">What does "Odu" mean, and why is it the name of this project?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">The word Odù is sacred in Afa, Ifá, and Fa—West African spiritual systems that carry the wisdom, destiny, and stories of our people. We chose this name to ground our work in ancestral intelligence. Just as an Odu contains multitudes of meaning, our project seeks to address the multitude of ways we can reclaim our land, culture, and self-determination. This is not just farming; it is a spiritual and political practice rooted in deep tradition.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">What is the political vision of The Odu Project?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">Our vision is a future where Black and oppressed communities are liberated and self-determined, with food systems, culture, and governance rooted in ancestral wisdom and ecological justice. We believe, as Thomas Sankara did, that we must "dare to invent the future," and that future is one where, in the words of Emiliano Zapata, "the land belongs to those who work it."</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal"> What do you actually do?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm"> 
+                                We operate on three interconnected fronts: <br />
+                                · Urban Farming & Food Sovereignty: We grow ancestral crops (okra, hibiscus, amaranth, etc.) using regenerative practices on urban plots across North Carolina. This is direct action for food autonomy.<br />
+                                · Community Organizing: Our Garden Clubs are bases for political education and building people's assemblies. We don't just grow food; we grow collective power.<br />
+                                · Political Education: We host workshops and youth programs that connect agroecology to African diasporic traditions and anti-colonial thinkers like Frantz Fanon, bell hooks, and Paulo Freire.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal"> Where are you located?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">We are currently on the ground in Durham, Orange County, and Winston-Salem, North Carolina. We are actively building solidarity and planning for expansion into Southeast North Carolina, the Atlanta area, and the Gullah Geechee corridor.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">What does "Food Sovereignty" mean to you?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm"> For us, food sovereignty is the political right of a community to control its own food systems. It is a direct rejection of the colonial, capitalist food model that disconnects us from the land and makes nourishment a market privilege. It is about reclaiming the power to define what we eat, how we grow it, and who benefits from it.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal"> How can I join a Garden Club?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">If you are in or near one of our current locations, you can join by clicking the "Join a Garden Club" button on our website and filling out the form. We welcome all who are ready to work the land and build community with us. No prior farming experience is necessary, only a commitment to collective work and liberation.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">I don't have a green thumb. How can I help?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">There are many ways to contribute your energy! You can:<br />
+                            · Volunteer for seasonal harvests, community outreach, or skill-sharing (e.g., carpentry, graphic design, childcare during events).<br />
+                            · Donate to fund seeds, soil, tools, and our educational programs.<br />
+                            · Invite Us to teach or collaborate with your organization, school, or community group.<br />
+                            · Spread the Word by following and sharing our work on Instagram (@oduproject).</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">Can you come speak or run a workshop for our organization?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">Yes. We offer workshops, assemblies, and community teachings rooted in food sovereignty and political ecology. Please contact us at info@theoduproject.com with "Speaking Request" in the subject line to discuss possibilities.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">How is farming a form of liberation?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">For centuries, our ancestors were forced to work the land for the enrichment of others. To now work the land for our own nourishment, our own economies, and our own cultural survival is a revolutionary act. As Fannie Lou Hamer demonstrated, food autonomy is a foundation of political independence. We are literally growing our freedom.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">What do you mean by "Global Solidarity"?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm"> Our struggle for land and food sovereignty is not isolated. We stand in solidarity with African agroecological networks, Maroon and Caribbean land traditions, Indigenous land stewards, and all Global South movements resisting the same extractive colonial systems. We learn from and connect our local work to these global freedom movements.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">Who are your guiding thinkers?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">Our work is deeply informed by a tapestry of revolutionary voices, including:<br />
+                            · Amílcar Cabral on culture and liberation.<br />
+                            · Thomas Sankara on self-sufficiency and daring to invent the future.<br />
+                            · Paulo Freire & bell hooks on critical pedagogy and education as the practice of freedom.<br />
+                            · Frantz Fanon on decolonization.<br />
+                            · The Zapatistas on autonomy and the principle that "land is life."<br />
+                            · The long legacy of Southern Black cooperative economics and organizing.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">How are you funded?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm"> We are sustained by the people. Our primary support comes from individual donations, community grants, and the collective labor of our members. We are committed to remaining accountable to our community, not to corporate or philanthropic interests that would dilute our political vision.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item border-t border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal"> How can my organization partner with The Odu Project?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm"> We are open to collaborations with aligned organizations who share our commitment to land liberation, food sovereignty, and building collective power. Please reach out to us at contact@theoduproject.com to explore potential partnerships.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 (Last item with bottom border) -->
+                    <div class="faq-item border-t border-b border-gray-200">
+                        <button class="w-full py-5 px-2 flex items-center justify-between text-left hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                            <span class="text-gray-800 text-sm md:text-base font-normal">I have more questions. What's the best way to contact you?</span>
+                            <svg class="chevron w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-2 pb-5">
+                            <p class="text-gray-600 text-sm">For all inquiries, the best email is contact@theoduproject.com. You can also follow our daily work and message us on Instagram @oduproject.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Help Section -->
+        <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- Security Matters -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-red-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </div>
+                        <div class="flex-1 bg-pink-100 rounded-md p-4">
+                            <h3 class="font-semibold text-gray-900 text-sm mb-1">Quick Help</h3>
+                            <h4 class="text-sm font-medium text-gray-700">Security matters</h4>
+                            <p class="text-xs text-gray-600">security@odu.com</p>
+                        </div>
+                    </div>
+
+                    <!-- General Inquiries -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-yellow-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm2 0h2v2h-2V8z"
+                                    clip-rule="evenodd"
+                                />
+                            </svg>
+                        </div>
+                        <div class="flex-1 bg-yellow-50 rounded-md p-4">
+                            <h4 class="text-sm font-medium text-gray-700">General inquiries</h4>
+                            <p class="text-xs text-gray-600">contact@odu.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // FAQ toggle functionality
+            let openIndex = null;
+            
+            function toggleFAQ(index) {
+                const content = document.querySelectorAll('.faq-content')[index];
+                const chevron = document.querySelector(`.faq-chevron-${index}`);
+                
+                if (openIndex === index) {
+                    // Close current FAQ
+                    content.classList.add('hidden');
+                    chevron.classList.remove('rotate-180');
+                    openIndex = null;
+                } else {
+                    // Close previously open FAQ if any
+                    if (openIndex !== null) {
+                        const prevContent = document.querySelectorAll('.faq-content')[openIndex];
+                        const prevChevron = document.querySelector(`.faq-chevron-${openIndex}`);
+                        prevContent.classList.add('hidden');
+                        prevChevron.classList.remove('rotate-180');
+                    }
+                    
+                    // Open new FAQ
+                    content.classList.remove('hidden');
+                    chevron.classList.add('rotate-180');
+                    openIndex = index;
+                }
+            }
+        </script>
+    </main>
+
+  <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
